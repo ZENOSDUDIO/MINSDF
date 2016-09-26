@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dataschema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<fields>
+		<field name="分组名称" source="GroupName" destination="分组名称" index="1" type="System.String" Required="true" />
+		<field name=" 描述" source="Description" destination=" 描述" index="2" type="System.String"  />
+	</fields>
+</dataschema>

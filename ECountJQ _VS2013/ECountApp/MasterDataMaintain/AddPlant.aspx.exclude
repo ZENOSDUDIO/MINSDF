@@ -1,0 +1,33 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="AddPlant.aspx.cs" Inherits="MasterDataMaintain_AddPlant" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <table style="width: 100%">
+        <tr>
+            <td>
+                <asp:Label ID="Label1" runat="server" Text="工厂代码"></asp:Label>
+                <asp:TextBox ID="txtPlantCode" runat="server" ValidationGroup="save"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                    ControlToValidate="txtPlantCode" Display="Static"  
+                    ErrorMessage="必填" ValidationGroup="save">*</asp:RequiredFieldValidator>
+                <cc1:ValidatorCalloutExtender ID="ValidatorCalloutExtender1" runat="server" TargetControlID="RequiredFieldValidator1">
+                </cc1:ValidatorCalloutExtender>
+            </td>
+            <td>
+                <asp:Label ID="Label2" runat="server" Text="工厂名称"></asp:Label>
+                <asp:TextBox ID="txtPlantName" runat="server" ValidationGroup="save"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+        <td >
+            <asp:Button ID="btnSave" runat="server" Text="保存" 
+                onclick="Save_Click" ValidationGroup="save" />
+        </td>
+        <td>
+        <asp:Button ID="back" runat="server" Text="返回" oncommand="back_Command" />
+        <td/>
+        </tr>
+    </table>
+</asp:Content>
+

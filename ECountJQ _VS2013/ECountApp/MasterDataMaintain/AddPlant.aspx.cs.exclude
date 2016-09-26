@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using SGM.ECount.DataModel;
+
+public partial class MasterDataMaintain_AddPlant : ECountBasePage
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void Save_Click(object sender, EventArgs e)
+    {
+        Plant plant = new Plant();
+        plant.PlantCode = txtPlantCode.Text;
+        plant.PlantName = txtPlantName.Text;
+        Service.AddPlant(plant);
+        /*提示添加成功，同时关闭当前窗口*/
+        Response.Write("<script>alert('保存成功！');</script>");
+        
+    }
+    protected void back_Command(object sender, CommandEventArgs e)
+    {
+        string url = "PlantQuery.aspx";
+        Response.Redirect(url);
+    }
+}

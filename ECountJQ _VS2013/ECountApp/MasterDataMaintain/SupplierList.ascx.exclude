@@ -1,0 +1,55 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="SupplierList.ascx.cs" Inherits="BizDataMaintain_SupplierList" %>
+
+<div class="SearchConditions">
+     <div><span>DUNS</span><asp:TextBox ID="txtDUNS" runat="server"></asp:TextBox><span>供应商名称</span><asp:TextBox ID="txtSupplierName" runat="server"></asp:TextBox><asp:Button ID="butQuery" runat="server" Text="查询" onclick="butQuery_Click" /></div>
+</div>
+
+<div style="float:left;">
+             <asp:GridView ID="gridView1" AutoGenerateColumns="False" Width="100%" runat="server" CellPadding="4" ForeColor="#333333" GridLines="Both">
+          <Columns>                            
+                <asp:TemplateField HeaderText="主键" Visible="False">
+                    <itemtemplate>
+                         <%# Eval("SupplierID")%>                        
+                    </itemtemplate>
+                    <HeaderStyle HorizontalAlign="Left" />
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="DUNS"  SortExpression="DUNS">
+                    <itemtemplate>
+                        <asp:LinkButton runat="server" ID="LinkButton1" OnClick="lnkEdit_Click"  CommandName='editex' CommandArgument='<%# Eval("SupplierID")%>'><%# Eval("DUNS")%></asp:LinkButton> 
+                    </itemtemplate>
+                    <HeaderStyle HorizontalAlign="Left" />
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="供应商名称" SortExpression="SupplierName">
+                    <itemtemplate>
+                        <%# Eval("SupplierName")%>
+                    </itemtemplate>
+                    <HeaderStyle HorizontalAlign="Left" />
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="电话1">
+                    <itemtemplate>
+                        <%# Eval("PhoneNumber1")%></itemtemplate>          
+                    <HeaderStyle HorizontalAlign="Left" />
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="电话2">
+                    <itemtemplate>
+                         <%# Eval("PhoneNumber2")%></itemtemplate>
+                    <HeaderStyle HorizontalAlign="Left" />
+                </asp:TemplateField>
+                
+                <asp:TemplateField HeaderText="传真">
+                    <itemtemplate>
+                     <%# Eval("Fax")%>
+                     </itemtemplate>
+                    <HeaderStyle HorizontalAlign="Left" />
+                </asp:TemplateField>
+          </Columns>
+                
+            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <EditRowStyle BackColor="#999999" />
+            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+        </asp:GridView>
+</div>

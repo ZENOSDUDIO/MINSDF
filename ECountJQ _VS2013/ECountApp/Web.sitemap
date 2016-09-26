@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode title="E-Count" >
+    <siteMapNode title="主数据维护">
+      <siteMapNode url="~\MasterDataMaintain\PartsQuery.aspx" title="物料主数据维护">
+        <siteMapNode url="~\MasterDataMaintain\PartEdit.aspx" title="修改物料主数据"/>
+      </siteMapNode>
+      <siteMapNode url="~\MasterDataMaintain\SupplierQuery.aspx" title="供应商DUNS维护"/>
+      <siteMapNode url="~\MasterDataMaintain\PlantQuery.aspx" title="工厂代码维护"/>
+      <siteMapNode url="~\MasterDataMaintain\WorkshopQuery.aspx" title="车间代码维护"/>
+      <siteMapNode url="~\MasterDataMaintain\SegmentQuery.aspx" title="工段代码维护"/>
+      <siteMapNode url="~\SystemManagement\StoreLocationList.aspx" title="存储区域维护"/>
+    </siteMapNode>
+    <siteMapNode title="业务数据维护"  >
+      <siteMapNode url="~\BizDataMaintain\PartRepairRecordQuery.aspx" title="返修记录列表">
+        <siteMapNode url="~\BizDataMaintain\PartRepairRecordEdit.aspx" title="返修记录"/>
+      </siteMapNode>
+      <siteMapNode url="~\BizDataMaintain\ConsignmentPartRecordQuery.aspx" title="外协记录列表">
+        <siteMapNode url="~\BizDataMaintain\ConsignmentPartRecordEdit.aspx" title="外协记录"/>
+      </siteMapNode>
+      <siteMapNode url="~\BizDataMaintain\PartGroupQuery.aspx" title="零件分组维护"/>
+    </siteMapNode>
+    <siteMapNode url="" title="基础数据维护"  description="">
+      <siteMapNode url="~\SystemManagement\BizParamsEdit.aspx" title="系统参数配置"/>
+      <siteMapNode url="~\SystemManagement\CycleCountLevelList.aspx" title="盘点级别维护"/>
+      <siteMapNode url="~\SystemManagement\StocktakeTypeList.aspx" title="盘点类别维护"/>
+      <siteMapNode url="~\SystemManagement\PartCategoryList.aspx" title="物料类别维护"/>
+      <siteMapNode url="~\SystemManagement\PartStatusList.aspx" title="物料状态维护"/>
+      <siteMapNode url="~\SystemManagement\StoreLocationTypeList.aspx" title="存储区域类型维护"/>
+      <siteMapNode url="~\SystemManagement\DifferenceAnalyzeItemList.aspx" title="差异分析项目维护"/>
+      <siteMapNode url="~\SystemManagement\UserGroupList.aspx" title="用户组维护">
+        <siteMapNode url="~\SystemManagement\UserGroupManagement.aspx" title="用户组编辑"></siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~\SystemManagement\UserList.aspx" title="用户维护"/>
+    </siteMapNode>
+    <siteMapNode url="" title="Physical Count"  description="">
+      <siteMapNode url="~\PhysicalCount\StocktakeReqList.aspx" title="盘点申请"/>
+      <siteMapNode url="~\PhysicalCount\CycleCountRequest.aspx" title="循环盘点申请"/>
+      <siteMapNode url="~\PhysicalCount\StocktakeNoticeList.aspx" title="盘点通知"/>
+      <siteMapNode url="~\PhysicalCount\StocktakeNoticeList.aspx?View=Result" title="实盘结果">
+        <siteMapNode url="~\PhysicalCount\StocktakeResultImport.aspx" title="导入实盘结果"/>
+      </siteMapNode>
+      <siteMapNode url="~\UPG\StocktakeResult.aspx" title="实盘结果UPG"/>
+      <siteMapNode url="~\PhysicalCount\StorageImport.aspx" title="系统库存导入"/>
+      <siteMapNode url="~\PhysicalCount\ImportAnalyseRef.aspx" title="差异分析数据导入"/>
+      <siteMapNode url="~\PhysicalCount\NewAnalyses.aspx" title="差异分析新增"/>
+      <siteMapNode url="~\PhysicalCount\NewAnalyses.aspx?view=viewAnalyse" title="执行差异分析"/>
+      <siteMapNode url="~\PhysicalCount\NewAnalyses.aspx?view=viewAnalyseMgr" title="差异分析管理"/>
+    </siteMapNode>
+    <siteMapNode url="Logout.aspx" title="退出" />
+  </siteMapNode>
+</siteMap>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dataschema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <fields>
+    <field name="零件号" source="零件号" destination="零件号" index="1" type="System.String" Required="true" />
+    <field name="工厂代码" source="工厂代码" destination="工厂代码" index="2" type="System.String" Required="true" />
+    <field name="物流系统存储区域" source="物流系统存储区域" destination="物流系统存储区域" index="3" type="System.String"  Required="true"/>
+    <field name="系统Available" source="系统Available" destination="系统Available" index="4" type="System.Decimal" Required="true" />
+    <field name="系统QI" source="系统QI" destination="系统QI" index="5" type="System.Decimal" Required="true" />
+    <field name="系统Block" source="系统Block" destination="系统Block" index="6" type="System.Decimal" Required="true" />
+    <field name="单价" source="单价" destination="单价" index="7" type="System.Decimal" Required="true" />
+  </fields>
+</dataschema>

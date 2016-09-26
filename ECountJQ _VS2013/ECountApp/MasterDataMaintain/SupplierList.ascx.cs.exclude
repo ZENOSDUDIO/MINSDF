@@ -1,0 +1,65 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using SGM.ECount.DataModel;
+
+public partial class BizDataMaintain_SupplierList : System.Web.UI.UserControl
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            bindGridView(null);
+        }        
+    }
+
+    /// <summary>
+    /// bind data to GridView
+    /// </summary>
+    /// <param name="part"></param>
+    private void bindGridView(Supplier model)
+    {
+        if (this.Page != null)
+        {
+            int pageCount;
+            int itemCount;
+            ECountBasePage pagebase = this.Page as ECountBasePage;
+            List<Supplier> ms = pagebase.Service.QuerySuppliersByPage(model,10,1,out pageCount,out itemCount);
+            this.gridView1.DataSource = ms;
+            this.gridView1.DataBind();
+        }
+    }
+
+    //Query Supplier 
+    protected void butQuery_Click(object sender, EventArgs e)
+    {
+        Supplier model = new Supplier();
+        if (!string.IsNullOrEmpty(this.txtDUNS.Text))
+        {
+            model.DUNS = this.txtDUNS.Text.Trim();
+        }
+        if (!string.IsNullOrEmpty(this.txtSupplierName.Text))
+        {
+            model.SupplierName = this.txtSupplierName.Text.Trim();
+        }
+        bindGridView(model);
+    }
+
+
+    //redirect to edit page
+    protected void lnkEdit_Click(object sender, EventArgs e)
+    {
+        LinkButton linkButton = (LinkButton)sender;
+        string opName = linkButton.CommandName;
+        string url;
+        if (opName == "editex")
+        {
+            url = string.Format("SupplierEdit.aspx?supplierid={0}", linkButton.CommandArgument);
+            Response.Redirect(url);
+            //PageOperator.OpenWindow(this, url, "700", "1200");
+        }
+    }
+}

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dataschema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<fields>
+		<field name="序号" source="RowNumber" destination="序号" index="1" type="System.String" minlength="1" maxlength="20" Required="true" />
+		<field name="工厂" source="PlantCode" destination="工厂" index="2" type="System.String" Required="true" />
+		<field name="外协零件号" source="PartCode" destination="外协零件号" index="3" type="System.String" minlength="2" maxlength="20" Required="true" />
+		<field name="供应商DUNS" source="DUNS" destination="供应商DUNS" index="4" type="System.String"  Required="true" />
+		<field name="外协供应商DUNS" source="CDUNS" destination="外协供应商DUNS" index="5" type="System.String" Required="true" />
+		<field name="外协供应商名称" source="SupplierName" destination="外协供应商名称" index="6" type="System.String"  Required="true"/>
+		<field name="电话" source="PhoneNumber1" destination="电话" index="7" type="System.String" Required="true" />
+		<field name="传真" source="Fax" destination="传真" index="8" type="System.String" Required="true" />
+		<field name="备注" source="Description" destination="备注" index="9" type="System.String" Required="true" />
+		<field name="最后修改时间" source="DateModified" destination="最后修改时间" index="10" type="System.String" Required="true" />
+	</fields>
+</dataschema>

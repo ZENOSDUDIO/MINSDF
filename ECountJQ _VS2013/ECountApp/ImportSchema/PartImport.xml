@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dataschema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<fields>
+		<field name="序号" source="序号" destination="序号" index="1" type="System.String" minlength="1" maxlength="20" Required="true" />
+		<field name="零件号" source="零件号" destination="零件号" index="2" type="System.String" minlength="2" maxlength="20" Required="true" />
+		<field name="工厂" source="工厂" destination="工厂" index="3" type="System.String" Required="false" />
+		<field name="DUNS" source="DUNS" destination="DUNS" index="4" type="System.String" Required="false" />
+		<field name="工段" source="工段" destination="工段" index="5" type="System.String" Required="false" />
+		<field name="工位" source="工位" destination="工位" index="6" type="System.String"  Required="true"/>
+		<field name="库位" source="库位" destination="库位" index="7" type="System.String"  Required="true"/>		
+		<field name="零件名称" source="零件名称" destination="零件名称" index="8" type="System.String" Required="true" />
+
+		<field name="FollowUp" source="FollowUp" destination="FollowUp" index="9" type="System.String" Required="true" />
+		<field name="车型" source="车型" destination="车型" index="10" type="System.String" Required="false" />
+		<field name="物料类别" source="物料类别" destination="物料类别" index="11" type="System.String" Required="false" />
+
+		<field name="车间" source="车间" destination="车间" index="12" type="System.String" Required="false" />
+
+		<field name="物料状态" source="物料状态" destination="物料状态" index="13" type="System.String" Required="false" />
+		<field name="循环盘点级别" source="循环盘点级别" destination="循环盘点级别" index="14" type="System.String" Required="false" />
+		<field name="已循环盘点次数" source="已循环盘点次数" destination="循环盘点级别" index="15" type="System.String" Required="false" />
+	</fields>
+</dataschema>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dataschema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <fields>
+	  <field name="RowNumber" source="序号" destination="RowNumber" index="1" type="System.String" minlength="1" maxlength="20" Required="true" />
+    <field name="PartCode" source="零件号" destination="PartCode" index="2" type="System.String" minlength="2" maxlength="20" Required="true" />
+    <field name="PlantCode" source="工厂代码" destination="PlantCode" index="3" type="System.String" Required="true" />
+    <field name="DUNS" source="供应商DUNS" destination="DUNS" index="4" type="System.String" Required="true" />
+    <field name="Type" source="申请类别" destination="Type" index="5" type="System.String" Required="true" />
+    <field name="Priority" source="紧急程度" destination="Priority" index="6" type="System.String" Required="true" />
+	  <field name="Description" source="备注" destination="Description" index="7" type="System.String" Required="false" />	  
+  </fields>
+</dataschema>

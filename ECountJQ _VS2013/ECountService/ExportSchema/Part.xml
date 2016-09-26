@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dataschema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<fields>
+		<field name="序号" source="RowNumber" destination="序号" index="1" type="System.String" minlength="1" maxlength="20" Required="true" />
+		<field name="零件号" source="PartCode" destination="零件号" index="2" type="System.String" minlength="2" maxlength="20" Required="true" />
+		<field name="工厂" source="PlantCode" destination="工厂" index="3" type="System.String" Required="true" />
+		<field name="DUNS" source="DUNS" destination="DUNS" index="4" type="System.String" Required="true" />
+
+		<field name="工段" source="Segments" destination="工段" index="5" type="System.String"   Required="true"/>
+		<field name="工位" source="WorkLocation" destination="工位" index="6" type="System.String"  Required="true"/>
+		<field name="库位" source="Dloc" destination="库位" index="7" type="System.String"  Required="true"/>
+		<field name="零件名称" source="PartChineseName" destination="零件名称" index="8" type="System.String" Required="true" />
+		<field name="FollowUp" source="FollowUp" destination="FollowUp" index="9" type="System.String" Required="true" />
+		<field name="车型" source="Specs" destination="车型" index="10" type="System.String" Required="true" />
+		<field name="物料类别" source="CategoryName" destination="物料类别" index="11" type="System.String" Required="true" />
+		<field name="车间" source="Workshops" destination="车间" index="12" type="System.String"  Required="true" />
+		<field name="物料状态" source="StatusName" destination="物料状态" index="13" type="System.String" Required="true" />
+		<field name="循环盘点级别" source="LevelName" destination="循环盘点级别" index="14" type="System.String" Required="true" />
+		<field name="已循环盘点次数" source="CycleCountTimes" destination="已循环盘点次数" index="15" type="System.String" Required="true" />
+		<field name="零件分组名称" source="GroupName" destination="零件分组名称" index="16" type="System.String" Required="true" />
+
+		<field name="工厂名称" source="PlantName" destination="工厂名称" index="17" type="System.String" Required="true" />
+		<field name="供应商名称" source="SupplierName" destination="供应商名称" index="18" type="System.String" Required="true" />
+		<field name="零件英文名称" source="PartEnglishName" destination="零件英文名称" index="19" type="System.String"  Required="true" />
+
+		<field name="最后修改用户" source="UserName" destination="最后修改用户" index="20" type="System.String"  Required="true" />
+		<field name="最后修改时间" source="DateModified" destination="最后修改时间" index="21" type="System.String"  Required="true" />
+	</fields>
+</dataschema>

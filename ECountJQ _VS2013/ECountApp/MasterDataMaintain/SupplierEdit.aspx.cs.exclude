@@ -1,0 +1,82 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using SGM.ECount.DataModel;
+
+public partial class BizDataMaintain_SupplierEdit : ECountBasePage
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            if (Request.QueryString["supplierid"] != null)
+            {
+                bindBaseData(Request.QueryString["supplierid"].ToString());
+            }
+        }
+    }
+
+    private void bindBaseData(string supplierID)
+    {
+        Supplier model = Service.GetSupplierbykey(new Supplier { SupplierID = int.Parse(supplierID) });
+        //bind supplier infomation
+        this.txtDUNS.Text = model.DUNS;
+        this.txtSupplierName.Text = model.SupplierName;
+        this.hidSupplierID.Value = model.SupplierID.ToString();
+        this.txtPhoneNumber1.Text = model.PhoneNumber1;
+        this.txtPhoneNumber2.Text = model.PhoneNumber2;
+        this.txtFax.Text = model.Fax;
+        this.txtDescription.Text = model.Description;
+    }
+
+    protected void Toolbar1_ButtonClicked(object sender, SCS.Web.UI.WebControls.ButtonEventArgs e)
+    {
+        switch (e.CommandName)
+        {
+            case "save":
+                btnSave_Click(null, null);
+                break;
+            case "return":
+                Response.Write("<script>window.location.href='SupplierQuery.aspx';</script>");
+                break;
+            default:
+                break;
+        }
+
+    }
+
+    protected void btnSave_Click(object sender, EventArgs e)
+    {
+        //save new Supplier
+        Supplier model = new Supplier();
+        model.DUNS = this.txtDUNS.Text.Trim();
+        model.SupplierName = this.txtSupplierName.Text.Trim();
+        model.PhoneNumber1 = this.txtPhoneNumber1.Text.Trim();
+        model.PhoneNumber2 = this.txtPhoneNumber2.Text.Trim();
+        model.Fax = this.txtFax.Text.Trim();
+        model.Description = this.txtDescription.Text.Trim();
+        if (this.hidSupplierID.Value.Length > 0)
+        {
+            model.SupplierID = int.Parse(this.hidSupplierID.Value);
+            Service.UpdateSupplier(model);
+        }
+        else
+        {
+            Supplier temp = new Supplier();
+            temp.DUNS = this.txtDUNS.Text.Trim();
+            int count = Service.GetSuppliersCount(temp);
+            if (count > 0)
+            {
+                Response.Write("<script>alert('该供应商DUNS已存在');</script>");
+            }
+            else
+            {
+                model = Service.AddSupplier(model);
+                this.hidSupplierID.Value = model.SupplierID.ToString();
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dataschema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <fields>
+	  <field name="分类" source="分类" destination="分类" index="1" type="System.String" minlength="2" maxlength="4" />
+	  <field name="金额" source="金额" destination="金额" index="2" type="System.Int32" min="2" max="4" domain="2|4" />
+	  <field name="备注" source="备注" destination="备注" index="3" type="System.String" Required="true" />
+	  <field name="金额" source="金额" destination="金额" index="2" type="System.Int32" notcontains="3" />
+  </fields>
+</dataschema>

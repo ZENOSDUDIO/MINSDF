@@ -1,0 +1,135 @@
+﻿body
+{
+    font-family: Verdana;
+    font-size: 12px;
+    margin: 0; /*background-color: #84bbf8;*/
+    background-color: #FFFFFF;
+    height: 100%;
+}
+.Grid
+{
+    width: 100%;
+    border-top: 1px solid #6B8EAD;
+    border-left: 1px solid #6B8EAD;
+    border-right: 1px solid #6B8EAD;
+    border-collapse: collapse;
+}
+.Grid img
+{
+    border:0px;
+}
+.Grid th
+{
+    height: 24px;
+    background: url("gridresource.gif");
+    background-position: 0px -2100px;
+    border: 1px solid #6B8EAD;
+    color: #00156e;
+    font-weight: normal;
+}
+.Grid td
+{
+    color: #333;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #D6D7E7;
+    font-weight: normal;
+}
+.Grid td a
+{
+    color: #00146B;
+    text-decoration: none;
+}
+.Grid td a:hover
+{
+    color: #00146B;
+    text-decoration: underline;
+}
+.Grid td a:visited
+{
+    color: #00146B;
+    text-decoration: none;
+}
+.Grid tr td
+{
+    background: #FFFFFF;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-weight: normal;
+}
+.Grid tr.alt td
+{
+    background: #EFF7FF;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.Grid tr.over td
+{
+    background: url("gridresource.gif");
+    background-position: 0px -2600px;
+}
+.Pager
+{
+    text-align: right;
+    height: 28px;
+    padding-right: 10px;
+    border-top: 1px solid #6B8EAD;
+    border-left: 1px solid #6B8EAD;
+    border-bottom: 1px solid #6B8EAD;
+    border-right: 1px solid #6B8EAD;
+    background: url("gridresource.gif");
+    background-position: 0px -7000px;
+}
+
+.Pager .Number
+{
+    color: #5A799C;
+}
+.Pager .CurrentIndex
+{
+    border: 1px solid #9C9A9C;
+}
+.Pager a
+{
+    text-decoration: none;
+}
+.Pager a:hover
+{
+    text-decoration: underline;
+}
+.Pager a:vivisted
+{
+    text-decoration: none;
+}
+.EditTable
+{
+    width: 100%;
+    border: 0px;
+    background-color:#CEEBF7;
+}
+.EditTable .TextCell
+{
+    height: 30px;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 5px;
+    background-color:#EFF7FF;
+}
+.EditTable .ControlCell
+{
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color:#FFFFFF;
+}
+.EditTable .ButtonCell
+{
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+}
+.EditTable .Caution
+{
+    color: Red;
+}

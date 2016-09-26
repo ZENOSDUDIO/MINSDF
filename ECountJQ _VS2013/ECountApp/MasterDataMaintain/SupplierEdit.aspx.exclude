@@ -1,0 +1,79 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
+    CodeFile="SupplierEdit.aspx.cs" Inherits="BizDataMaintain_SupplierEdit" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register Assembly="SCS.Web.UI.WebControls.Toolbar" Namespace="SCS.Web.UI.WebControls"
+    TagPrefix="SCS" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server" >
+    <fieldset class="Edit">
+        <legend class="mainTitle">供应商</legend>
+        <SCS:Toolbar ID="Toolbar1" runat="server" CssClass="toolbar" OnButtonClicked="Toolbar1_ButtonClicked"
+            EnableClientApi="true" Width="790px">
+            <ButtonCssClasses CssClass="button" CssClassEnabled="button_enabled" CssClassDisabled="button_disabled"
+                CssClassSelected="button_selected" />
+            <Items>
+                <SCS:ToolbarButton CausesValidation="True" CommandName="save" ImageUrl="~/App_Themes/Images/Toolbar/Save.gif"
+                    Text="保存" ValidationGroup="save" />
+                <SCS:ToolbarButton CausesValidation="False" ImageUrl="~/App_Themes/Images/Toolbar/left.gif"
+                    Text="返回" CommandName="return" />
+            </Items>
+        </SCS:Toolbar>
+        <table width="100%"  cellspacing="5" cellpadding="0">
+            <asp:HiddenField ID="hidSupplierID" runat="server" />
+            <tr>
+                <td class="width_80">
+                    供应商名称：
+                </td>
+                <td class="width_220">
+                    <asp:TextBox ID="txtSupplierName" runat="server" Width="200px"></asp:TextBox><asp:RequiredFieldValidator
+                        ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtSupplierName"
+                        Display="None" ErrorMessage="供应商名称必填" SetFocusOnError="True" ValidationGroup="save">*</asp:RequiredFieldValidator><cc1:ValidatorCalloutExtender
+                            ID="ValidatorCalloutExtender1" runat="server" TargetControlID="RequiredFieldValidator1"
+                            HighlightCssClass="EditError">
+                        </cc1:ValidatorCalloutExtender>
+                </td>
+                <td class="width_80">
+                    D U N S：
+                </td>
+                <td>
+                    <asp:TextBox ID="txtDUNS" runat="server" Width="200px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtDUNS"
+                        Display="None" ErrorMessage="DUNS必填" SetFocusOnError="True" ValidationGroup="save">*</asp:RequiredFieldValidator><cc1:ValidatorCalloutExtender
+                            ID="ValidatorCalloutExtender2" runat="server" TargetControlID="RequiredFieldValidator2"
+                            HighlightCssClass="EditError">
+                        </cc1:ValidatorCalloutExtender>
+                </td>
+            </tr>
+            <tr>
+                <td class="width_80">
+                    电&nbsp;&nbsp;&nbsp;话1：
+                </td>
+                <td>
+                    <asp:TextBox ID="txtPhoneNumber1" runat="server" Width="200px"></asp:TextBox>
+                </td>
+                <td class="width_80">
+                    电&nbsp;&nbsp;&nbsp;话2：
+                </td>
+                <td>
+                    <asp:TextBox ID="txtPhoneNumber2" runat="server" Width="200px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="width_80">
+                    传&nbsp;&nbsp;&nbsp;真：
+                </td>
+                <td colspan="3">
+                    <asp:TextBox ID="txtFax" runat="server" Width="200px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="width_80">
+                    描&nbsp;&nbsp;&nbsp;述：
+                </td>
+                <td colspan="3">
+                    <asp:TextBox ID="txtDescription" runat="server" Width="400px" TextMode="MultiLine"></asp:TextBox>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</asp:Content>

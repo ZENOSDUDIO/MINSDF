@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dataschema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <fields>
+	<field name="序号" source="序号" destination="序号" index="1" type="System.String" minlength="1" maxlength="20" Required="true" />
+    <field name="零件号" source="零件号" destination="零件号" index="2" type="System.String" minlength="2" maxlength="20" Required="true" />
+    <field name="工厂" source="工厂" destination="工厂" index="3" type="System.String" min="2" max="10" Required="true" />
+    <field name="DUNS" source="DUNS" destination="DUNS" index="4" type="System.String" Required="true" />
+    <field name="存储区域" source="存储区域" destination="存储区域" index="5" type="System.String" Required="true" />
+    <field name="库位" source="库位" destination="库位" index="6" type="System.Decimal" />
+    <field name="线旁" source="线旁" destination="线旁" index="7" type="System.Decimal" />
+    <field name="加工区" source="加工区" destination="加工区" index="8" type="System.Decimal" />
+    <field name="Available" source="Available" destination="Available" index="9" type="System.Decimal" />
+    <field name="Block" source="Block" destination="Block" index="10" type="System.Decimal" />
+    <field name="QI" source="QI" destination="QI" index="11" type="System.Decimal" />
+    <field name="起始CSN" source="起始CSN" destination="起始CSN" index="12" type="System.String" />
+    <field name="终止CSN" source="终止CSN" destination="终止CSN" index="13" type="System.String" />
+  </fields>
+</dataschema>

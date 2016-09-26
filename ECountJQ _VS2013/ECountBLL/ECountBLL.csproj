@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22472535-3FCF-4739-8A8E-8BCC5F73FDB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SGM.ECount.BLL</RootNamespace>
+    <AssemblyName>ECountBLL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EFExtensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\EFExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelTransfer">
+      <HintPath>..\References\ExcelTransfer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseBLL.cs" />
+    <Compile Include="BizParamsBLL.cs" />
+    <Compile Include="ConsignmentPartBLL.cs" />
+    <Compile Include="DiffAnalyseReportBLL.cs" />
+    <Compile Include="DiffAnalyseReportDetailsBLL.cs" />
+    <Compile Include="DiffAnalyseReportItemBLL.cs" />
+    <Compile Include="DifferenceAnalyseDetailsBLL.cs" />
+    <Compile Include="StocktakeNotificationBLL.cs" />
+    <Compile Include="StorageRecordBLL.cs" />
+    <Compile Include="StoreLocationTypeBLL.cs" />
+    <Compile Include="CycleCountLevelBLL.cs" />
+    <Compile Include="DifferenceAnalyzeBLL.cs" />
+    <Compile Include="OperationBLL.cs" />
+    <Compile Include="PartBLL.cs" />
+    <Compile Include="PartCategoryBLL.cs" />
+    <Compile Include="PartGroupBLL.cs" />
+    <Compile Include="PartRepairRecordBLL.cs" />
+    <Compile Include="PartStatusBLL.cs" />
+    <Compile Include="PlantBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SegmentBLL.cs" />
+    <Compile Include="StocktakeDetailBLL.cs" />
+    <Compile Include="StocktakePriorityBLL.cs" />
+    <Compile Include="StocktakeStatusBLL.cs" />
+    <Compile Include="StocktakeTypeBLL.cs" />
+    <Compile Include="StoreLocationBLL.cs" />
+    <Compile Include="StockTakeReqBLL.cs" />
+    <Compile Include="SupplierBLL.cs" />
+    <Compile Include="UserBLL.cs" />
+    <Compile Include="UserGroupBLL.cs" />
+    <Compile Include="WorkshopBLL.cs" />
+    <Compile Include="WorkshopStocktakeDetailBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cache\Cache.csproj">
+      <Project>{EA5CF016-CFD7-41EE-9BB5-D1F4DEB408A1}</Project>
+      <Name>Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ECountDataModel\ECountDataModel.csproj">
+      <Project>{9BEB945F-B162-4096-B55E-01B4A3B24950}</Project>
+      <Name>ECountDataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{6BD810A4-8545-4703-8B4D-2B098216A049}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
